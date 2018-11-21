@@ -14,4 +14,9 @@ module ApplicationHelper
       content_tag(:p,"<p>Thanks for visiting me from #{session[:source]} and you are on #{layout_name}</p>".html_safe,class: "source-greeding")
     end
   end
+
+  def copyright_generator
+    @copyright = BawaskarViewTool::Render.copyright 'Sujay Bawaskar', 'All rights reserved'
+  end
+
 end

@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/coupa-sbawaskar/dev-tool
+  revision: 2ac7c8a12810859528fc3ee952b6c9c955a0481c
+  specs:
+    bawaskar_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -194,6 +200,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bawaskar_view_tool!
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.0.0)
   byebug

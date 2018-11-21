@@ -60,3 +60,4 @@ gem 'devise', '~> 4.5'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'bawaskar_view_tool', git: 'https://github.com/coupa-sbawaskar/dev-tool'
