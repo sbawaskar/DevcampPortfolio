@@ -1,8 +1,15 @@
 class PortfoliosController < ApplicationController
   layout "portfolio"
-  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :edit, :create, :update, :toggle_status]}, site_admin: :all
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :edit, :create, :update, :toggle_status, :sort]}, site_admin: :all
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
+  end
+
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find_by_id(value[:id]).update(position: value[:position])
+    end
+    render nothing: true
   end
 
   def angular
