@@ -62,5 +62,7 @@ private
   def portfolio_params
     params.require(:portfolio).permit(:title,
                                       :body,
+                                      :thumb_image,
+                                      :main_image,
                                       technologies_attributes: [:name])
   end
